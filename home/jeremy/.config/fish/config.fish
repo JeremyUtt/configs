@@ -8,7 +8,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 fish_add_path /home/jeremy/GitRepos/CEdev/bin
 #gpg2 --homedir "$XDG_DATA_HOME"/gnupg
-
+export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
 
 # USAGE: `printf "%b" "$COLOR_B\e0This is a blue text.$COLOR_RESET"`
 # printf "%b" "$BG_R\e0This is text with a red background.$COLOR_RESET"
