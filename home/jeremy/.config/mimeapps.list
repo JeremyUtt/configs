@@ -1,0 +1,17 @@
+[Added Associations]
+application/pdf=firefox.desktop;
+application/x-ipynb+json=codium.desktop;
+image/vnd.adobe.photoshop=photoshop.desktop;
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/geo=google-maps-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+
+[Default Applications]
+application/pdf=firefox.desktop;
+application/x-ipynb+json=codium.desktop;
+image/vnd.adobe.photoshop=photoshop.desktop;
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/geo=google-maps-geo-handler.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
