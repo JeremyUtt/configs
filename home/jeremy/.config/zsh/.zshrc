@@ -3,10 +3,13 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
-export XDG_DATA_DIRS=$XDG_DATA_DIRS:$HOME/.nix-profile/share
+export XDG_DATA_DIRS=/usr/local/share:/usr/share:$HOME/.nix-profile/share
+export XDG_CONFIG_DIRS=/etc/xdg
 
 # Make programs XDG complient
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+if type "compinit" > /dev/null; then
+        compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+fi
 alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
@@ -24,7 +27,8 @@ export PYTHONSTARTUP="/etc/python/pythonrc"
 export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
 
 #Set other env vars
-export EDITOR='nvim'
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # Create alias'
 alias python=/usr/bin/python3
@@ -35,7 +39,7 @@ alias pdev="source /home/jeremy/PyVenv/bin/activate"
 
 # Create functions
 function unique(){
-	find . ! -empty -not -path "./$1/*" -type f -exec md5sum {} + | sort | uniq -w32 -dD	
+        find . ! -empty -not -path "./$1/*" -type f -exec md5sum {} + | sort | uniq -w32 -dD
 }
 
 #Create Path
@@ -52,4 +56,3 @@ plugins=(git)
 
 # Invove Oh My Zsh
 source $ZSH/oh-my-zsh.sh
-
