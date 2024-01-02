@@ -36,7 +36,7 @@ alias update="sudo apt update && sudo apt upgrade"
 alias get="sudo apt install"
 alias tsget="sudo tailscale file get ~/Downloads"
 alias pdev="source /home/jeremy/PyVenv/bin/activate"
-
+alias foocus="/home/jeremy/GitRepos/Fooocus/fooocus_env/bin/python3 /home/jeremy/GitRepos/Fooocus/entry_with_update.py --preset realistic"
 # Create functions
 function unique(){
         find . ! -empty -not -path "./$1/*" -type f -exec md5sum {} + | sort | uniq -w32 -dD
